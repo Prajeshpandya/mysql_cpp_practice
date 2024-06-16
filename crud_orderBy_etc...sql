@@ -35,9 +35,32 @@ select avg(age) from data;
 select fname,lname from data order by id desc limit 1 offset 1 ;
 select age from data order by id desc limit 1 offset 1;  -- second highest age in data..
 select age from data where age <= 25 && age >= 20;
+select age from data where age between 20 and 25;  
+select * from data where age not between 20 and 25;
 
+-- shortcut for or operation 
+select * from data where fname in ("parth","jane");
 
+-- concat
+select concat("parth"," ","pandya") as fullname;
 
+select concat (fname , " ", lname) from data as fullname;
 
+-- reverse 
+select reverse("parth");
+SELECT REVERSE(fname) 
+FROM data
+WHERE id = 1;
+
+select concat("parth",reverse("parth")) as palindrom ; 
+
+-- string functions; 
+
+select char_length("parth") as length;
+select lower("PARTH");
+
+select curdate();
+select current_time();
+select now(); -- date&time
 
   
