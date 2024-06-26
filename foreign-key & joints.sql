@@ -6,6 +6,7 @@ sid int not null auto_increment primary key ,
     subject varchar(50) ,
     foreign key(id) references data(id)
 );
+-- for foreign key: the syntax like mentioned upper.
 
 insert into data_students(sid,id,marks,subject) values(1,1,101,"maths");
 INSERT INTO data_students (id, marks, subject) VALUES 
